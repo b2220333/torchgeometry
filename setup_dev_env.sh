@@ -22,8 +22,10 @@ $sdk_dir/.dev_env/bin/conda install -y \
   numpy \
   pytorch \
   torchvision \
-  opencv \
   -c pytorch
   
 $sdk_dir/.dev_env/bin/conda  clean -ya					    
-
+source $sdk_dir/.dev_env/bin/activate $sdk_dir/.dev_env
+pip install -U \
+    apriltag==0.0.13 \
+    opencv-python
